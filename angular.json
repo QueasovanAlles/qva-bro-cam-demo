@@ -17,6 +17,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+			"allowedCommonJsDependencies": [
+					"lodash"
+				 ],
             "outputPath": "dist/qvabrovi",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -100,5 +103,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "8e17b4da-63c8-482b-8592-c5797e900df9"
   }
 }
