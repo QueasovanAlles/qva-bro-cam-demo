@@ -1,5 +1,16 @@
 <div class="grid-container">
-    <div *ngFor="let color of colors" [style.background-color]="color"></div>
+    <div *ngFor="let color of colors; let i = index" [style.background-color]="color">
+		<div class="brovi-video-target">
+			<div *ngIf="i === 1">
+				<app-video-player [scaleToParent]="true"></app-video-player>
+			</div>
+			<div *ngIf="i === 6">
+				<video #gridVideo  src="assets/testVideo.mp4" autoplay loop muted style="background:white;width: 100%; height: 100%"></video>
+					<div class="play-controls">
+					<button (click)="startPlay()">Play</button>
+				</div>
+			</div>
+		</div>
+    </div>
 </div>
-<app-browser-video></app-browser-video>
-<app-video-player [left]='200'></app-video-player>
+<app-browser-capture></app-browser-capture>

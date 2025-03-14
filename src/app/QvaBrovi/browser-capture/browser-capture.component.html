@@ -1,0 +1,36 @@
+<div class="cam-container" [style.width.px]="width" [style.height.px]="height" [style.left.px]="left" [style.top.px]="top">
+	<div class="cam-panel" #camPanel [class.recording]="isRecording">    
+		<!--div class="cam-controls">
+			<button #stopButton (click)="stopRecording()" [ngClass]="{'hidden': !isRecording}">Stop Recording</button>
+			<button #startButton (click)="startRecording()"  [ngClass]="{'hidden': isRecording}">Start Recording</button>
+			<select [(ngModel)]="selectedRatio" (ngModelChange)="onRatioChange()">
+				<option value="panel">Panel Ratio</option>
+				<option value="16:9">16:9</option>
+				<option value="9:16">9:16</option>
+				<option value="4:3">4:3</option>
+				<option value="3:4">3:4</option>
+				<option value="1:1">1:1</option>
+			</select>
+		</div-->
+
+		<div class="cam-controls">
+			<button (click)="startRecording()" [ngClass]="{'hidden': isRecording}">
+				<i class="bi bi-record-circle"></i> Record
+			</button>
+			<button (click)="stopRecording()" [ngClass]="{'hidden': !isRecording}">
+				<i class="bi bi-stop-circle"></i> Stop
+			</button>
+			<select [(ngModel)]="selectedRatio" (ngModelChange)="onRatioChange()">
+				<option value="panel">Panel Ratio</option>
+				<option value="16:9">16:9</option>
+				<option value="9:16">9:16</option>
+				<option value="4:3">4:3</option>
+				<option value="3:4">3:4</option>
+				<option value="1:1">1:1</option>
+			</select>
+			<div class="output-jack" [class.connected]="isRecording"></div>
+		</div>
+
+		<div #resizeHandle class="resize-handle"></div>
+	</div>
+</div>

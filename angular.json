@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "qvabrovi": {
+    "qva-bro-cam-demo": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
 			"allowedCommonJsDependencies": [
 					"lodash"
 				 ],
-            "outputPath": "dist/qvabrovi",
+            "outputPath": "dist/qva-bro-cam-demo",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "qvabrovi:build:production"
+              "browserTarget": "qva-bro-cam-demo:build:production"
             },
             "development": {
-              "browserTarget": "qvabrovi:build:development"
+              "browserTarget": "qva-bro-cam-demo:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "qvabrovi:build"
+            "browserTarget": "qva-bro-cam-demo:build"
           }
         },
         "test": {

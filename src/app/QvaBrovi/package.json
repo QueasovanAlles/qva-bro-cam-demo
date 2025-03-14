@@ -1,0 +1,26 @@
+{
+  "name": "@qva/brovi",
+  "version": "1.0.0",
+  "description": "Browser video capture module for Angular",
+  "main": "index.js",
+  "dependencies": {
+    "@angular/common": "^16.2.0",
+    "@angular/core": "^16.2.0",
+    "@angular/forms": "^16.2.0",
+    "html2canvas": "^1.4.1",
+    "rxjs": "~7.8.0"
+  },
+  "peerDependencies": {
+    "@angular/core": "^16.2.0",
+    "@angular/common": "^16.2.0",
+    "@angular/forms": "^16.2.0"
+  },
+  "keywords": [
+    "angular",
+    "video",
+    "capture",
+    "browser"
+  ],
+  "author": "Queaso van Alles",
+  "license": "MIT"
+}

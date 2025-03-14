@@ -1,27 +1,53 @@
-# Qvabrovi
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.7.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+Context
+— none fetched
+# QvA Bro Cam Demo
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This demo showcases the browser video capture and playback capabilities of the QvA Bro Cam library.
 
-## Build
+![QvA Bro Cam](/docs/qvabrocam.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Overview
+QvA Bro Cam Demo is an Angular application demonstrating browser-based video capture functionality. It uses html2canvas for frame capture and HTML5 video elements for playback, all wrapped in an easy-to-use Angular component library.
 
-## Running unit tests
+## Features
+- Live browser screen capture
+- Video stream preview
+- Capture controls
+- Video playback
+- Frame rate settings
+- Resolution configuration
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Installation
+```bash
+git clone https://github.com/QueasovanAlles/qva-bro-cam-demo.git
+cd qva-bro-cam-demo
+npm install
+ng serve
+```
 
-## Running end-to-end tests
+Browse to: localhost:4200
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Dependencies
+- Angular 16+
+- qva-bro-cam-lib: ^1.0.0
+- html2canvas: ^1.4.1
 
-## Further help
+## Usage
+The demo provides a simple interface to:
+- Start/stop screen capture
+- Preview captured video
+- Control playback
+- Adjust capture settings
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Development
+Developed using Angular CLI with the QvA Bro Cam library integration.
+
+## Community
+Join our Google Group: queaso-van-alles@googlegroups.com
+
+## License
+MIT License - © 2025 Queaso van Alles

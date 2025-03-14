@@ -1,0 +1,165 @@
+.recording-panel {
+    padding: 2rem;
+    width: 640px;
+    height:640px;
+    transition: background-color 1s;
+    box-sizing: border-box;
+}
+
+video {
+    width: 100%; 
+    height: 100%; 
+    background: #FFF;
+    border: 1px solid red;
+}
+
+button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+}
+
+select {
+    position: fixed;
+    top: 20px;
+    left: 150px;
+    padding: 10px;
+}
+
+.cam-panel {
+    position: absolute;
+    width: 320px;
+    height: 240px;
+    background: none;
+    z-index: 10000;
+    box-sizing: border-box;
+    top: 20px;
+    left: 20px;
+    
+    button, select {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin: 5px;
+    }
+    
+	&:hover:not(.recording) {
+        cursor: move;
+		border-left: 5px dotted;
+        border-right: 5px dotted;
+		animation: borderColorCycle 7s infinite;
+	}
+
+	@keyframes borderColorCycle {
+		0% { border-color: #f0fff0; }
+		20% { border-color: #a0b0a0; }
+		40% { border-color: #506050; }
+		60% { border-color: #101510; }
+		80% { border-color: #506050; }
+		90% { border-color: #a0b0a0; }
+		100% { border-color: #f0fff0; }
+	}
+    
+	.resize-handle {
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		background: #fff;
+		right: -5px;
+		bottom: -5px;
+		cursor: se-resize;
+		opacity: 0;
+		transition: opacity 0.2s;
+
+		.cam-panel:hover & {
+			opacity: 1;
+		}
+
+		&:hover {
+			border: 1px dotted #00ff00;
+		}
+	}
+		
+	.cam-controls {
+		position: absolute;
+        top: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		width: fit-content;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 0.5rem;
+		background: rgba(32, 33, 36, 0.9);
+		border-radius: 8px;
+		backdrop-filter: blur(4px);
+		height: 3rem;
+
+		button {
+			padding: 0.5rem 1rem;
+			border-radius: 4px;
+			border: none;
+			background: #444;
+			color: white;
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+
+			i {  // for glyphicons
+				font-size: 1.2rem;
+			}
+
+			&:hover {
+				background: #666;
+			}
+
+		}
+
+        &.at-bottom {
+			top: calc(0% - 4rem);
+		}
+
+		select {
+			background: #333;
+			color: white;
+			border: 1px solid #555;
+			border-radius: 4px;
+			padding: 0.3rem;
+		}
+
+		.output-jack {
+			width: 1.5rem;
+			height: 1.5rem;
+			border-radius: 50%;
+			border: 2px solid #444;
+			margin-left: auto;
+			position: relative;
+			
+			&.connected {
+				border-color: #00ff00;
+				&::after {
+					content: '';
+					position: absolute;
+					width: 0.8rem;
+					height: 0.8rem;
+					background: #00ff00;
+					border-radius: 50%;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+		}
+	}
+}
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+.cam-controls button.hidden {
+    display: none !important;
+}
